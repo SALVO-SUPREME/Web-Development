@@ -1,0 +1,693 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    align-self: center;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+table, th, td {
+    border:1px solid rgba(245, 245, 245, 0.548);
+}
+
+hr {
+    margin: 5%;
+}
+
+footer {
+    background-color: rgb(89, 197, 26);
+    text-align: center;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+
+footer button {
+    background-color: rgb(89, 197, 26);
+    color: white;
+}
+
+footer button:hover {
+    background-color: rgb(62, 138, 17); /* Green */
+    color: rgb(250, 250, 250);
+    cursor: pointer;
+}
+
+/*INDEX PAGE*/
+/*navbar*/
+.sticky-nav {
+    width: 100%;
+    height: 60px; 
+    position: fixed; 
+    top: 0;
+    background: rgb(0, 104, 16);
+    z-index: 3;
+    box-shadow: 0 0 0 5px rgb(89, 197, 26);
+}
+    
+.sticky-nav ul {
+    padding: 20px;
+    margin: 0px auto;
+    list-style: none;
+    text-align: center;
+}
+    
+.sticky-nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+    
+.sticky-nav ul li a {
+    padding: 20px 0;
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+    
+.sticky-nav ul li a:hover {
+    color: rgb(89, 197, 26);
+}
+
+
+.sticky-nav .svg-logo {
+    object-fit: contain;
+    z-index: 3;
+    width: 150px;
+    height: 150px;
+    float: left;
+    padding-bottom: 90px;
+    padding-left: 20px;
+}
+
+
+/*Slideshow section*/  
+
+.slideshow {
+    background-color: rgba(166, 221, 16, 0.671);
+    overflow: hidden;
+    height: auto;
+    width: auto;
+    box-shadow: 0 0 0 7px rgb(89, 197, 26);
+}
+
+@keyframes slide_animation{
+    0% {left:0px;}
+    10% {left:0px;}
+    20% {left:1200px;}
+    30% {left:1200px;}
+    40% {left:2400px;}
+    50% {left:2400px;}
+    60% {left:1200px;}
+    70% {left:1200px;}
+    80% {left:0px;}
+    90% {left:0px;}
+    100% {left:0px;}
+}
+
+.slideshow-images {
+    width: auto;
+    height: auto;
+    margin: 0 0 0 -2000px;
+    position: relative;
+    animation-name: slide_animation;
+    animation-duration: 33s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+
+.img-container {
+    max-height: 800px;
+    overflow: hidden;
+    height: 800px;
+    width: 1200px;
+    position: relative;
+    float: left;
+}
+
+.welcome-heading {
+    z-index: 2;
+    position: absolute;
+    top: 53%;
+    left: 30%;
+    transform: translate(-30%, -50%);
+    font-size: 60px;
+    font-family: 'Inter', sans-serif;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 2px greenyellow;
+}
+
+.welcome-heading1 {
+    z-index: 2;
+    position: absolute;
+    top: 60%;
+    left: 33%;
+    transform: translate(-30%, -50%);
+    font-size: 100px;
+    font-family: 'Inter', sans-serif;
+    color: rgb(255, 255, 255);
+    text-decoration-line: underline;
+    -webkit-text-stroke: 3px greenyellow;
+}
+
+.slideshow-button {
+    transition-duration: 0.3s;
+    margin: 20px;
+    position: absolute;
+    top: 68%;
+    left: 25%;
+    transform: translate(-30%, -50%);
+    font-size: 30px;
+    font-family: 'Inter', sans-serif;
+    z-index: 2;
+    background-color: greenyellow;
+}
+
+.slideshow-button:hover {
+    background-color: rgb(89, 197, 26); /* Green */
+    color: white;
+    cursor: pointer;
+}
+
+.pass-button {
+    transition-duration: 0.3s;
+    margin: 20px;
+    position: absolute;
+    top: 68%;
+    left: 67%;
+    transform: translate(-30%, -50%);
+    font-size: 30px;
+    font-family: 'Inter', sans-serif;
+    z-index: 2;
+    background-color: greenyellow;
+}
+
+.pass-button:hover {
+    background-color: rgb(89, 197, 26); /* Green */
+    color: white;
+    cursor: pointer;
+}
+
+.donate-button {
+    transition-duration: 0.3s;
+    margin: 20px;
+    position: absolute;
+    top: 68%;
+    left: 75%;
+    transform: translate(-30%, -50%);
+    font-size: 30px;
+    font-family: 'Inter', sans-serif;
+    z-index: 2;
+    background-color: greenyellow;
+}
+
+.donate-button:hover {
+    background-color: rgb(89, 197, 26); /* Green */
+    color: white;
+    cursor: pointer;
+}
+
+/*Our values section*/    
+.grid-container1 {
+    padding: 100px;
+    margin: 100px;
+    margin-top: 100px;
+    display: grid;
+    text-align: center;
+    grid-template-columns: 2fr 2fr;
+    grid-auto-rows: max-content 300px;
+    grid-auto-rows: minmax(150px, 300px);
+    gap: 40px;
+}
+
+.grid-container1 .header1 {
+    font-size: 40px;
+    font-family: 'Inter', sans-serif;
+    color: rgb(89, 197, 26);
+}
+
+.grid-container1 .paragraph1 {
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    line-height: 2rem;
+}
+
+.photo1 {
+    object-fit:contain;
+    width: 100%;
+    max-height: 100%;
+    border-radius: 5%;
+    transition: .5s;
+  }
+
+.photo1:hover {
+    filter:saturate(2);
+}
+
+.about-us-button {
+    transition-duration: 0.3s;
+    margin: 20px;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+.about-us-button:hover {
+    background-color: rgb(89, 197, 26); /* Green */
+    color: white;
+    cursor: pointer;
+}
+
+/*What can you do? section*/
+.grid-container2 {
+    padding: 100px;
+    margin: 100px;
+    display: grid;
+    text-align: center;
+    grid-template-columns: 2fr 2fr;
+    grid-auto-rows: max-content 300px;
+    grid-auto-rows: minmax(150px, 300px);
+    gap: 40px;
+}
+
+.grid-container2 .header1 {
+    font-size: 40px;
+    font-family: 'Inter', sans-serif;
+    color: rgb(89, 197, 26);
+}
+
+.grid-container2 .paragraph1 {
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    line-height: 2rem;
+}
+
+.photo2 {
+    object-fit:contain;
+    width: 100%;
+    max-height: 100%;
+    border-radius: 5%;
+    transition: .5s;
+  }
+
+.photo2:hover {
+    filter:saturate(3);
+}
+
+/*Our Animals section*/
+.our-animals {
+    background-color:  rgb(15, 197, 97);
+    text-align: center;
+    padding: 150px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.our-animals .header1 {
+    font-size: 40px;
+    font-family: 'Inter', sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.our-animals .paragraph1 {
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    line-height: 2rem;
+    color: rgb(250, 250, 250);
+}
+
+.animal-button {
+    transition-duration: 0.3s;
+    margin: 20px;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .animal-button:hover {
+    background-color: #20ce25; /* Green */
+    color: white;
+    cursor: pointer;
+  }
+
+  /*extra-info section*/
+.grid-container3 {
+    padding: 100px;
+    margin: 100px;
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    box-shadow: 0 0 0 5px rgb(15, 197, 97);
+}
+
+.grid-container3 .header1 {
+    font-size: 40px;
+    font-family: 'Inter', sans-serif;
+    color: rgb(89, 197, 26);
+}
+
+.grid-container3 .paragraph {
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5rem;
+}
+
+.grid-container3 .button {
+    transition-duration: 0.3s;
+    margin: 20px;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+
+.grid-container3 .button:hover {
+    background-color: rgb(89, 197, 26); /* Green */
+    color: white;
+    cursor: pointer;
+}
+
+
+/*Animals Page*/
+/*Animal of the week section*/
+.animal-week {
+    background-color: black;
+    box-shadow: 0 0 0 7px rgb(89, 197, 26);
+}
+
+.animal-week .photo {
+    object-fit: contain;
+    height: 900px;
+    transition: .5s;
+}
+
+.animal-week .photo:hover {
+    filter: saturate(1.5);
+}
+
+.animal-week .header {
+    z-index: 2;
+    position: absolute;
+    top: 45%;
+    left: 18%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    font-family: 'Inter', sans-serif;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 2px greenyellow;
+}
+
+.animal-week .header1 {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 21.5%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    font-family: 'Inter', sans-serif;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 2px greenyellow;
+}
+
+.animal-week .paragraph {
+    z-index: 2;
+    position: absolute;
+    top: 60%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-family: 'Inter', sans-serif;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 0.5px greenyellow;
+}
+
+.animal-week .button {
+    position: absolute;
+    top: 70%;
+    left: 9%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    transition-duration: 0.3s;
+    background-color: green;
+}
+
+.animal-week .button:hover {
+    background-color: #20ce25; /* Green */
+    color: white;
+    cursor: pointer;
+}
+
+/*Animal-collage section*/
+.flex {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    padding: 50px;
+    gap: 10px;
+}
+
+.flex .photo {
+    border-radius: 5%;
+    transition: .5s;
+}
+
+.flex .photo:hover {
+    filter: saturate(2);
+}
+
+
+.animal-collage .header {
+    font-size: 40px;
+    font-family: 'Inter', sans-serif;
+    color: rgb(89, 197, 26);
+    padding-left: 200px;
+}
+
+/*About Us page*/
+/*Brief history Section*/
+
+.history {
+    background-color:  rgb(15, 197, 97);
+    text-align: center;
+    padding: 150px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.history .header {
+    font-size: 40px;
+    font-family: 'Inter', sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.history .paragraph {
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    line-height: 2rem;
+    color: rgb(250, 250, 250);
+}
+
+/*Table of opening times section*/
+.opening-times {
+    background-color:  rgb(89, 197, 26);
+    text-align: center;
+    padding: 150px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.opening-times .header {
+    font-size: 30px;
+    font-family: 'Inter', sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.opening-times .table {
+    font-size: 20px;
+    padding-left: 650px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    color: rgb(250, 250, 250);
+}
+
+.opening-times .address {
+    color: white;
+    font-size: 20px;
+}
+
+/*Conservation section*/
+.grid-container {
+    padding: 100px;
+    margin: 100px;
+    display: grid;
+    text-align: center;
+    grid-template-columns: 2fr 2fr;
+    grid-auto-rows: max-content 300px;
+    grid-auto-rows: minmax(150px, 300px);
+    gap: 40px;
+}
+
+.grid-container .header {
+    font-size: 40px;
+    font-family: 'Inter', sans-serif;
+    color: rgb(89, 197, 26);
+}
+
+.grid-container .paragraph {
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    line-height: 2rem;
+}
+
+.grid-container .button {
+    transition-duration: 0.3s;
+    margin: 20px;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+.grid-container .button:hover {
+    background-color: rgb(89, 197, 26); /* Green */
+    color: white;
+    cursor: pointer;
+}
+
+.photo {
+    object-fit:contain;
+    width: 100%;
+    max-height: 100%;
+    border-radius: 5%;
+    transition: .5s;
+  }
+
+.photo:hover {
+    filter:saturate(3);
+}
+
+/*PROTOTYPE PAGE*/
+/*Under Construction Section*/
+
+.construction {
+    background-color: gainsboro;
+    text-align: center;
+    padding: 150px;
+    margin-top: 250px;
+    margin-bottom: 250px;
+}
+
+.construction .header {
+    font-size: 50px;
+    color: rgb(89, 197, 26);
+}
+
+.construction .paragraph {
+    font-size: 30px;
+}
+
+/*BOOKINGS PAGE*/
+/*Event Section*/
+
+.event {
+    background-color:  rgb(15, 197, 97);
+    text-align: center;
+    padding: 150px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.event .header {
+    font-size: 40px;
+    font-family: 'Inter', sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.event .paragraph {
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    line-height: 2rem;
+    color: rgb(250, 250, 250);
+}
+
+.event .button {
+    transition-duration: 0.3s;
+    margin: 20px;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+}
+  
+.event .button:hover {
+    background-color: #20ce25; /* Green */
+    color: white;
+    cursor: pointer;
+}
+
+/*Book your visit section*/
+.booking {
+    text-align: center;
+    margin: 100px;
+    box-shadow: 0 0 0 3px green;
+}
+
+.booking .header {
+    font-size: 30px;
+    color: rgb(89, 197, 26);
+    padding: 20px;
+}
+
+.booking .booking-table {
+    margin-left: 650px;
+}
+
+.booking .button {
+    transition-duration: 0.3s;
+    margin: 30px;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+}
+  
+.booking .button:hover {
+    background-color: #20ce25; /* Green */
+    color: white;
+    cursor: pointer;
+}
+
+/*Donate section*/
+.donation {
+    background-color:  rgb(10, 153, 74);
+    text-align: center;
+    padding: 150px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.donation .header {
+    font-size: 40px;
+    font-family: 'Inter', sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.donation .paragraph {
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    line-height: 2rem;
+    color: rgb(250, 250, 250);
+}
+
+.donation .button {
+    transition-duration: 0.3s;
+    margin: 20px;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+}
+  
+.donation .button:hover {
+    background-color: #20ce25; /* Green */
+    color: white;
+    cursor: pointer;
+}

@@ -1,0 +1,152 @@
+/*Kid's Page Style Sheet*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    align-self: center;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: rgba(133, 247, 57, 0.514);
+    background-image: url(/images/Vecteezy_comic-halftone_background-1_RD0321-01_generated.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*nav bar*/
+.sticky-nav {
+    width: 100%;
+    height: 60px; 
+    position: fixed; 
+    top: 0;
+    background: rgba(250, 76, 76, 0.952);
+    z-index: 3;
+    box-shadow: 0 0 0 5px rgba(250, 54, 54, 0.925);
+}
+    
+.sticky-nav ul {
+    padding: 20px;
+    margin: 0px auto;
+    list-style: none;
+    text-align: center;
+}
+    
+.sticky-nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+    
+.sticky-nav ul li a {
+    padding: 20px 0;
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+    
+.sticky-nav ul li a:hover {
+    color: rgb(89, 197, 26);
+}
+
+
+.sticky-nav .svg-logo {
+    object-fit: contain;
+    z-index: 3;
+    width: 150px;
+    height: 150px;
+    float: left;
+    padding-bottom: 90px;
+    padding-left: 20px;
+}
+
+
+/*animals-close-to-extinction-section*/
+.grid-container {
+    padding: 100px;
+    margin: 200px;
+    display: grid;
+    text-align: center;
+    grid-template-columns: 2fr 2fr;
+    grid-auto-rows: max-content 300px;
+    grid-auto-rows: minmax(150px, 300px);
+    gap: 40px;
+}
+
+.grid-item-grid-item-2 {
+    background-color: rgba(250, 76, 76, 0.753);
+    border-radius: 5%;
+}
+
+.grid-item-grid-item-2 .header1 {
+    font-size: 40px;
+    color: rgb(5, 71, 146);
+}
+
+.grid-item-grid-item-2 .paragraph1 {
+    font-size: 20px;
+    line-height: 2rem;
+    color: rgb(0, 0, 0);
+}
+
+.photo2 {
+    object-fit:contain;
+    width: 100%;
+    max-height: 100%;
+    transition: .5s;
+    margin-top: 70px;
+    animation: shake 5s;
+}
+
+.photo2:hover {
+    filter:saturate(3);
+}
+
+.grid-item-grid-item-2 ol {
+    color: rgb(5, 71, 146);
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
+/*footer*/
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #ffffff;
+    background-color: rgb(250, 76, 76);
+    text-align: center;
+}
+
+footer button {
+    background-color: rgb(169, 64, 9);
+    color: white;
+}
+
+footer button:hover {
+    background-color: rgb(197, 26, 26); /* Green */
+    color: rgb(250, 250, 250);
+    cursor: pointer;
+}
